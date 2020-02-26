@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'; // Page navegation
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa'; // Icons
 import api from '../../services/api'; // github API
 import { Container, Form, SubmitButton, List } from './styles'; // CSS
@@ -79,7 +80,9 @@ export default class Main extends Component {
           {repositories.map(repository => (
             <li key={repository.name}>
               <span>{repository.name}</span>
-              <a href="#">Detalhes</a>
+              <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
+                Detalhes
+              </Link>
             </li>
           ))}
         </List>
