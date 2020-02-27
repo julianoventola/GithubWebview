@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'; // Page navegation
 import { FaGithubAlt, FaPlus, FaSpinner } from 'react-icons/fa'; // Icons
 import api from '../../services/api'; // github API
-import { Container, Form, SubmitButton, List } from './styles'; // CSS
+import { Form, SubmitButton, List } from './styles'; // CSS
+import Container from '../../components/Container'; // Component
 
 export default class Main extends Component {
   state = {
